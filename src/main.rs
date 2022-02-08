@@ -43,6 +43,14 @@ fn main() {
 
 }
 
+fn create_hash(word:String) => HashMap{
+    
+}
+
+fn do_hash_check(){
+    
+}
+
 fn mod_input() -> [u8; 1]{
    let stdin = 0;
    let termios = Termios::from_fd(stdin).unwrap();
