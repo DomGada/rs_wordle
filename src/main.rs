@@ -44,6 +44,16 @@ fn main() {
 }
 
 fn create_hash(word:String) => HashMap{
+ //We want to take in our string here and return a hashmap.
+ //Our hashmap should contain letters as the key and a 
+ //u8 vector containing the index which the letter lies.
+    let mut location_hash = HashMap::new();
+    let word_chars : Vec<char> = word.chars().collect();
+    for index in 0..4{
+        let mut deposit_vec = location_hash.entry(word_chars[index]).or_input(Vec::new() as Vec<u8>);
+        deposit_vec.push(index as u8);
+    }
+    location_hash
     
 }
 
